@@ -12,6 +12,8 @@ services:
     api:
         build:
             context: ./api
+        environment:
+            - PHP_IDE_CONFIG=serverName=myserver
         volumes:
           - ./public:/var/www/public
           - ./api/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
